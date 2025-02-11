@@ -1,0 +1,80 @@
+#post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #ffeb3b;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 40px);
+    position: relative;
+    animation: fadeInScale 0.3s ease-out;
+    transition: trasnform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px); /** Perque s'elivi el post al pasar el cursor **/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.post.deleting-animation {
+    animation: fadeOutScale 0.3s ease-out;
+}
+
+.post h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.post p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.delete-post-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #ff4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-post-button:hover {
+    background-color: #cc0000;
+}
+
+.delete-post-button:active {
+    transform: scale(0.95);
+}
+
+/** ANIMACIONS POST **/
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeOutScale {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  }

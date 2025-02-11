@@ -1,0 +1,72 @@
+/** Estils del Header **/
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    gap: 20px;
+}
+
+.header-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #cccccc;
+    font-size: 32px;
+}
+
+/** Estils del Menu dels Post **/
+.post-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.post-menu input,
+.post-menu textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: 'Popins', sans-serif;
+}
+
+.post-menu textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.post-menu button {
+    padding: 10px;
+    background-color: #64b5f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post-menu button:hover {
+    background-color: #42a5f5;
+}
+
+.post-menu button:active {
+    transform: scale(0.95);
+}
+
+/** ANIMACIÓ PER EL FORMULARI **/
+@keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
